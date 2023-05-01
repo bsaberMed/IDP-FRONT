@@ -1,0 +1,29 @@
+<!-- nav -->
+<!--<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>-->
+
+<div class="container-fluid full-height" *ngIf="user">
+    <div class="row full-height">
+      <div class="col-md-3 col-lg-2" style="padding: 0;background-color: #3c4b64;">
+        <app-side-bar></app-side-bar>
+      </div>
+        <main class="col-md-9 ms-sm-auto col-lg-10" style="padding: 0;">
+          
+          <app-nav-bar></app-nav-bar>
+          <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>
+<div class="container-fluid" *ngIf="!user">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
