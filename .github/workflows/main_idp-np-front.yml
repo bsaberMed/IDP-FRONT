@@ -51,6 +51,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'IDP-NP-FRONT'
-          slot-name: 'Production'
+          slot-name: 'prod'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_07CD9CB0F623492A996EFC6F1A1CCD49 }}
           package: .
